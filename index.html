@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+<style>
+    #zero{
+        width: 40px;
+        height: 25px;
+        border-radius: 40%;
+        background-color: red;
+        border: none;
+    }
+    .oprater{
+        width: 40px;
+        border-radius: 40%;
+        background-color: rgb(5, 244, 244);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+        height: 20px;
+    }
+    .btnDesgin{
+        width: 40px;
+        border-radius: 40%;
+        background-color: blueviolet;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: none;
+        height: 20px;
+
+    }
+    .calci{
+        text-align: center;
+    }
+    .btnDesgin:hover{
+    background-color: rgb(236, 215, 215);    
+    }
+    .oprater:hover{
+        background-color: rgb(231, 234, 33);
+    }
+    #zero:hover{
+        background-color: rgb(30, 239, 55);
+    }
+    #display{
+        width: 200px;
+        height: 35px;
+        border-radius: 25%;
+        font-family: 'Lucida Sans Unicode',;
+        font-size: medium;
+        font-weight: 100;
+        background-color: rgb(163, 165, 129);
+        border: 1px solid black;
+    }
+    #display:focus{
+        background-color: rgba(243, 254, 253, 0.874);
+    }
+    .Back:hover{
+        background-color: rgb(223, 10, 142);
+    }
+    .equal:hover{
+        background-color: rgb(236, 110, 110);
+    }
+    .Back{
+        width: 40px;
+        border-radius: 40%;
+        background-color: rgb(21, 236, 67);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border: none;
+
+    }
+    .equal{
+        width: 40px;
+        border-radius: 40%;
+        background-color: rgb(236, 14, 180);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border: none;
+        width: 40px;
+        height: 25px;
+    }
+    h1{ position: relative;
+        margin-top: 50%;
+        margin-left: 200px;
+    }
+#head{
+    position: absolute;
+    top: -10px;
+    left: 150px;
+    text-transform: uppercase;
+    text-decoration:overline;
+    font-weight:700px;
+    color:white;
+    
+}
+
+
+</style>
+
+</head>
+<body style="margin: 0px; padding: 0px; background:linear-gradient(to left,blue,red)">
+    
+     <div style="border: 8px solid black;border-style: double;border-color: rgb(97, 4, 38);  background-color: rgb(204, 204, 215); border-radius: 20%; height: 235px; width: 250px; float: left;margin-left: 60%; margin-top: 150px;">
+        <header>
+           
+            <p>
+    <form name="form1" action="calculater.html" class="calci" method="post">
+    <input  type="text" name="answer" id="display" aria-placeholder="center" placeholder="enter your problem">
+    <br><br>
+    <input type="button" class="btnDesgin" value="7" onclick="form1.answer.value+='7'">
+    <input type="button" class="btnDesgin" value="8" onclick="form1.answer.value+='8'">
+    <input type="button" class="btnDesgin" value="9" onclick="form1.answer.value+='9'">
+    <input type="button" class="Back" value="C" onclick="form1.answer.value=''">
+    <input type="button" class=" Back" value="Back" onclick="form1.answer.value=form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length*1-1)">
+    <br><br>
+    <input type="button" class="btnDesgin" value="4" onclick="form1.answer.value+='4'">
+    <input type="button" class="btnDesgin" value="5" onclick="form1.answer.value+='5'">
+    <input type="button" class="btnDesgin" value="6" onclick="form1.answer.value+='6'">
+    <input type="button" class=" oprater" value="*" onclick="form1.answer.value+='*'">
+    <input type="button" class=" oprater" value="/" onclick="form1.answer.value+='/'">
+    <br><br>
+    <input type="button" class="btnDesgin" value="1" onclick="form1.answer.value+='1'">
+    <input type="button" class="btnDesgin" value="2"onclick="form1.answer.value+='2'">
+    <input type="button" class="btnDesgin" value="3" onclick="form1.answer.value+='3'">
+    <input type="button" class=" oprater" value="+" onclick="form1.answer.value+='+'">
+    <input type="button" class=" oprater" value="-"onclick="form1.answer.value+='-'">
+    <br><br>
+    <input type="button" id="zero" value="0"onclick="form1.answer.value+='0'">
+    <input type="button" class="btnDesgin" value="00" onclick="form1.answer.value+='00'">
+    <input type="button" class=" equal" value="." onclick="form1.answer.value+='.'">
+    <input type="button" class=" equal" value="="onclick="form1.answer.value=eval(form1.answer.value)">
+
+    </form>
+    </p>
+        </header>
+    </div>
+    <div class="heading" id="head"><h1> online calculater<br>with &nbsp;&nbsp;vikki</h1></div>
+</body>
+</html>
